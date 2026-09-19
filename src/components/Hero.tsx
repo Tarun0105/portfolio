@@ -104,7 +104,7 @@ export default function Hero() {
               </svg>
             </button>
             <a
-              href={profile.resumePdf}
+              href={`${import.meta.env.BASE_URL}resume.pdf`}
               download="Tarun_Haribabu_Resume.pdf"
               className="btn-secondary"
             >
