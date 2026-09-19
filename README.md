@@ -1,32 +1,74 @@
-# React + TypeScript + Vite
+# Tarun Haribabu — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Personal portfolio website for **Tarun Haribabu**, Java Backend Engineer.
 
-Currently, two official plugins are available:
+**Live site:** https://tarun0105.github.io/portfolio
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19 + TypeScript
+- Vite 8
+- Tailwind CSS 3
+- GitHub Actions (CI/CD → GitHub Pages)
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Getting Started
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+### Prerequisites
+
+- Node.js 24+
+- npm 11+
+
+### Install dependencies
+
+```bash
+npm install
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+### Start development server
+
+```bash
+npm run dev
+```
+
+Opens at **http://localhost:5173**
+
+---
+
+## Other Commands
+
+| Command | Description |
+|---|---|
+| `npm run build` | Production build (output in `dist/`) |
+| `npm run preview` | Preview the production build locally |
+
+---
+
+## Deployment
+
+Pushing to `main` automatically triggers GitHub Actions, which builds and deploys to GitHub Pages.
+
+**Live URL:** https://tarun0105.github.io/portfolio
+
+---
+
+## Project Structure
+
+```
+portfolio/
+├── public/
+│   └── resume.pdf          # Resume download
+├── src/
+│   ├── components/         # Page sections (Hero, About, Skills, etc.)
+│   ├── data/
+│   │   └── content.ts      # Single source of truth for all content
+│   ├── hooks/
+│   │   └── useScrollReveal.ts
+│   └── index.css
+├── .github/workflows/
+│   └── deploy.yml          # GitHub Actions CI/CD
+└── vite.config.ts
+```
