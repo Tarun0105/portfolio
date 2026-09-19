@@ -83,7 +83,7 @@ export default function Nav() {
           ))}
           <li>
             <a
-              href={profile.resumePdf}
+              href={`${import.meta.env.BASE_URL}resume.pdf`}
               download="Tarun_Haribabu_Resume.pdf"
               className="ml-2 btn-primary text-xs py-1.5 px-3.5"
             >
@@ -162,7 +162,7 @@ export default function Nav() {
             ))}
             <li className="pt-2 border-t border-slate-800 mt-1">
               <a
-                href={profile.resumePdf}
+                href={`${import.meta.env.BASE_URL}resume.pdf`}
                 download="Tarun_Haribabu_Resume.pdf"
                 className="btn-primary w-full justify-center mt-1"
                 onClick={() => setMobileOpen(false)}

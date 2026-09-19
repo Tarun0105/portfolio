@@ -114,7 +114,7 @@ export default function Contact() {
                 </div>
               </div>
               <a
-                href={profile.resumePdf}
+                href={`${import.meta.env.BASE_URL}resume.pdf`}
                 download="Tarun_Haribabu_Resume.pdf"
                 className="btn-primary w-full justify-center"
               >
